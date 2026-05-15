@@ -1,0 +1,332 @@
+{
+  "financial_limits": {
+    "advance_payment": {
+      "secured_advance_max": 20,
+      "mobilization_advance_max": 10,
+      "material_advance_max": 75,
+      "plant_machinery_advance_max": 75
+    },
+    "retention_money": {
+      "min": 5,
+      "max": 10,
+      "release_conditions": {
+        "50_percent_release": "after_completion_certificate",
+        "remaining_release": "after_defect_liability_period"
+      }
+    },
+    "performance_guarantee": {
+      "min": 5,
+      "max": 10,
+      "validity": "defect_liability_period_plus_3_months"
+    },
+    "liquidated_damages": {
+      "max_per_week": 1.0,
+      "total_max": 10,
+      "grace_period_days": 0
+    },
+    "security_deposit": {
+      "tender": {
+        "min": 1,
+        "max": 5
+      },
+      "performance": {
+        "min": 5,
+        "max": 10
+      }
+    },
+    "price_variation": {
+      "threshold_amount": 10000000,
+      "threshold_period": 18,
+      "formula_based": true
+    }
+  },
+  "mandatory_clauses": {
+    "contract_essentials": [
+      "party_identification_complete",
+      "work_description_detailed",
+      "contract_value_breakup",
+      "scope_of_work",
+      "drawings_specifications"
+    ],
+    "payment_terms": [
+      "payment_schedule",
+      "milestone_payments",
+      "advance_payment_terms",
+      "retention_money_clause",
+      "final_payment_conditions",
+      "interest_on_delayed_payments"
+    ],
+    "timeline_provisions": [
+      "commencement_date",
+      "completion_timeline",
+      "extension_of_time_clause",
+      "liquidated_damages_clause",
+      "critical_path_milestones"
+    ],
+    "quality_safety": [
+      "quality_specifications",
+      "testing_requirements",
+      "safety_requirements",
+      "environmental_compliance",
+      "quality_control_measures"
+    ],
+    "legal_provisions": [
+      "arbitration_clause",
+      "termination_provisions",
+      "force_majeure_clause",
+      "applicable_law",
+      "jurisdiction_clause"
+    ],
+    "insurance_guarantees": [
+      "insurance_requirements",
+      "performance_guarantee",
+      "defect_liability",
+      "contractor_all_risk_insurance",
+      "workmen_compensation"
+    ]
+  },
+  "technical_standards": {
+    "concrete": {
+      "grades": [
+        "M10",
+        "M15",
+        "M20",
+        "M25",
+        "M30",
+        "M35",
+        "M40",
+        "M45",
+        "M50"
+      ],
+      "is_codes": [
+        "IS:456-2000",
+        "IS:383-2016",
+        "IS:10262-2019"
+      ],
+      "testing_frequency": {
+        "cube_test": "1_per_100_cum_or_1_per_day",
+        "slump_test": "every_batch"
+      }
+    },
+    "steel": {
+      "grades": [
+        "Fe415",
+        "Fe500",
+        "Fe550",
+        "Fe600"
+      ],
+      "is_codes": [
+        "IS:1786-2008",
+        "IS:432-1982"
+      ],
+      "testing_requirements": "mill_test_certificate_mandatory"
+    },
+    "cement": {
+      "types": [
+        "OPC_43",
+        "OPC_53",
+        "PPC",
+        "PSC"
+      ],
+      "is_codes": [
+        "IS:12269-2013",
+        "IS:1489-1991"
+      ],
+      "testing": "every_50_tonnes"
+    },
+    "brick_masonry": {
+      "brick_class": [
+        "First_class",
+        "Second_class"
+      ],
+      "is_codes": [
+        "IS:1077-1992",
+        "IS:2212-1991"
+      ],
+      "mortar_ratio": [
+        "1:6",
+        "1:4",
+        "1:3"
+      ]
+    }
+  },
+  "compliance_requirements": {
+    "statutory_clearances": [
+      "environmental_clearance",
+      "forest_clearance",
+      "crzc_clearance",
+      "pollution_control_board_consent"
+    ],
+    "labor_compliance": [
+      "contract_labor_act_compliance",
+      "minimum_wages_act",
+      "provident_fund_registration",
+      "esi_registration",
+      "labor_license"
+    ],
+    "local_permissions": [
+      "building_plan_approval",
+      "municipal_permissions",
+      "fire_noc",
+      "structural_stability_certificate"
+    ],
+    "tax_registrations": [
+      "gst_registration",
+      "pan_registration",
+      "professional_tax",
+      "income_tax_clearance"
+    ]
+  },
+  "contractor_eligibility": {
+    "registration": {
+      "cpwd_registration_mandatory": true,
+      "valid_registration_required": true,
+      "category_matching": true
+    },
+    "financial_capacity": {
+      "turnover_criteria": "3x_of_contract_value",
+      "liquid_assets": "10_percent_contract_value",
+      "credit_rating": "minimum_required"
+    },
+    "technical_capacity": {
+      "similar_work_experience": "60_percent_contract_value",
+      "key_personnel_qualification": "degree_plus_experience",
+      "equipment_availability": "critical_equipment_owned_or_hired"
+    },
+    "past_performance": {
+      "blacklisting_check": true,
+      "performance_rating": "satisfactory_minimum",
+      "litigation_history": "acceptable_limits"
+    }
+  },
+  "work_execution_standards": {
+    "quality_control": {
+      "quality_plan_mandatory": true,
+      "third_party_inspection": "for_critical_items",
+      "testing_laboratory": "nabl_accredited",
+      "quality_records": "mandatory_maintenance"
+    },
+    "safety_standards": {
+      "safety_plan": "site_specific_required",
+      "safety_officer": "qualified_mandatory",
+      "safety_equipment": "is_standards_compliance",
+      "accident_reporting": "immediate_mandatory"
+    },
+    "environmental_standards": {
+      "waste_management_plan": true,
+      "dust_pollution_control": true,
+      "noise_pollution_limits": true,
+      "water_pollution_prevention": true
+    }
+  },
+  "measurement_payment": {
+    "measurement_standards": {
+      "cpwd_specifications": "2019_edition",
+      "measurement_book": "mb_format_mandatory",
+      "joint_measurement": "contractor_engineer"
+    },
+    "payment_process": {
+      "running_account_bills": "monthly_submission",
+      "final_bill": "within_6_months_completion",
+      "bill_processing_time": "30_days_maximum",
+      "payment_time": "30_days_from_approval"
+    }
+  },
+  "contract_administration": {
+    "variation_works": {
+      "approval_limits": {
+        "up_to_25_percent": "competent_authority",
+        "beyond_25_percent": "higher_approval"
+      },
+      "rate_determination": "cpwd_schedule_rates"
+    },
+    "time_extension": {
+      "grounds": [
+        "force_majeure",
+        "client_delays",
+        "design_changes"
+      ],
+      "application_time": "within_30_days",
+      "approval_authority": "contract_administrator"
+    },
+    "dispute_resolution": {
+      "engineer_decision": "first_level",
+      "arbitration": "final_remedy",
+      "arbitrator_appointment": "sole_arbitrator_preferred"
+    }
+  },
+  "defect_liability": {
+    "period": {
+      "building_works": "12_months",
+      "electrical_mechanical": "12_months",
+      "roads": "24_months",
+      "special_works": "as_specified"
+    },
+    "maintenance_requirements": {
+      "periodic_inspection": true,
+      "defect_rectification": "contractor_cost",
+      "performance_monitoring": true
+    }
+  },
+  "documentation_requirements": {
+    "mandatory_documents": [
+      "detailed_drawings",
+      "technical_specifications",
+      "bill_of_quantities",
+      "general_conditions_contract",
+      "special_conditions_contract",
+      "cpwd_safety_code"
+    ],
+    "submission_requirements": [
+      "method_statements",
+      "material_test_certificates",
+      "progress_reports",
+      "quality_assurance_plan",
+      "as_built_drawings"
+    ]
+  },
+  "decision_thresholds": {
+    "APPROVED": {
+      "min_score": 85,
+      "max_critical_issues": 0,
+      "mandatory_compliance": 100,
+      "financial_compliance": 100,
+      "technical_compliance": 90
+    },
+    "CONDITIONALLY_APPROVED": {
+      "min_score": 70,
+      "max_critical_issues": 2,
+      "mandatory_compliance": 90,
+      "conditions_required": true,
+      "review_timeline": "specific_milestones"
+    },
+    "NEEDS_REVISION": {
+      "min_score": 50,
+      "max_score": 70,
+      "revision_areas": "specific_identification",
+      "resubmission_required": true
+    },
+    "REJECTED": {
+      "max_score": 50,
+      "critical_issues": "any_safety_legal",
+      "non_compliance": "mandatory_clauses"
+    }
+  },
+  "validation_weights": {
+    "mandatory_clauses": 30,
+    "financial_compliance": 25,
+    "technical_standards": 20,
+    "legal_compliance": 15,
+    "documentation": 10
+  },
+  "critical_issues": [
+    "missing_arbitration_clause",
+    "excessive_liquidated_damages",
+    "non_standard_payment_terms",
+    "missing_performance_guarantee",
+    "inadequate_insurance_coverage",
+    "non_compliance_safety_standards",
+    "missing_statutory_clearances",
+    "unbalanced_risk_allocation"
+  ]
+}

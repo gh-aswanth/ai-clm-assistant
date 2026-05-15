@@ -1,0 +1,32 @@
+[project]
+name = "clm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.13.1",
+    "databases[sqlite]>=0.9.0",
+    "fastapi>=0.109.0",
+    "htmldocx>=0.0.6",
+    "langchain>=1.2.10",
+    "langchain-community>=0.4.1",
+    "langchain-experimental>=0.4.1",
+    "langchain-neo4j>=0.8.0",
+    "langchain-openai>=0.3.0",
+    "langchain-text-splitters>=0.3.0",
+    "langgraph>=1.0.10",
+    "mammoth>=1.12.0",
+    "openai>=2.30.0",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic>=2.5.3",
+    "pydantic-settings>=2.1.0",
+    "pypdf>=6.8.0",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.0.1",
+    "python-jose[cryptography]>=3.3.0",
+    "python-multipart>=0.0.6",
+    "reportlab>=4.4.10",
+    "sqlalchemy>=2.0.25",
+    "uvicorn[standard]>=0.27.0",
+]
