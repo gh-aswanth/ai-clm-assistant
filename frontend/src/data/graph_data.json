@@ -1,0 +1,1925 @@
+[
+    {
+        "nodes": [
+            {
+                "id": "Cpwd Contract Agreement - Comprehensive Sample",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd/Ncr/Del/2024/0847",
+                "type": "Contract",
+                "properties": {}
+            },
+            {
+                "id": "15Th March 2024",
+                "type": "Date",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Cpwd Contract Agreement - Comprehensive Sample",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cpwd/Ncr/Del/2024/0847",
+                    "type": "Contract",
+                    "properties": {}
+                },
+                "type": "CONTRACT_NUMBER",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Cpwd/Ncr/Del/2024/0847",
+                    "type": "Contract",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "15Th March 2024",
+                    "type": "Date",
+                    "properties": {}
+                },
+                "type": "DATE",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "CPWD CONTRACT AGREEMENT - COMPREHENSIVE SAMPLE\n    Contract No: CPWD/NCR/DEL/2024/0847\n    Date: 15th March 2024",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Cpwd, New Delhi Circle, Executive Engineer Office, Lodhi Road, New Delhi - 110003",
+                "type": "Organization",
+                "properties": {}
+            },
+            {
+                "id": "Modern Infrastructure Solutions Pvt. Ltd.",
+                "type": "Organization",
+                "properties": {}
+            },
+            {
+                "id": "U45200Dl2018Ptc334521",
+                "type": "Identifier",
+                "properties": {}
+            },
+            {
+                "id": "07Abcde1234F1Z5",
+                "type": "Identifier",
+                "properties": {}
+            },
+            {
+                "id": "Abcde1234F",
+                "type": "Identifier",
+                "properties": {}
+            },
+            {
+                "id": "Plot 45, Sector 18, Noida - 201301",
+                "type": "Address",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Modern Infrastructure Solutions Pvt. Ltd.",
+                    "type": "Organization",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "U45200Dl2018Ptc334521",
+                    "type": "Identifier",
+                    "properties": {}
+                },
+                "type": "CIN",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Modern Infrastructure Solutions Pvt. Ltd.",
+                    "type": "Organization",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "07Abcde1234F1Z5",
+                    "type": "Identifier",
+                    "properties": {}
+                },
+                "type": "GST",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Modern Infrastructure Solutions Pvt. Ltd.",
+                    "type": "Organization",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Abcde1234F",
+                    "type": "Identifier",
+                    "properties": {}
+                },
+                "type": "PAN",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Modern Infrastructure Solutions Pvt. Ltd.",
+                    "type": "Organization",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Plot 45, Sector 18, Noida - 201301",
+                    "type": "Address",
+                    "properties": {}
+                },
+                "type": "ADDRESS",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "PARTIES:\n    Employer: CPWD, New Delhi Circle, Executive Engineer Office, Lodhi Road, New Delhi - 110003\n    Contractor: Modern Infrastructure Solutions Pvt. Ltd.\n    CIN: U45200DL2018PTC334521, GST: 07ABCDE1234F1Z5, PAN: ABCDE1234F\n    Address: Plot 45, Sector 18, Noida - 201301",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Renovation And Upgradation Of Administrative Block",
+                "type": "Work",
+                "properties": {}
+            },
+            {
+                "id": "Administrative Block",
+                "type": "Building",
+                "properties": {}
+            },
+            {
+                "id": "Civil Works",
+                "type": "Work",
+                "properties": {}
+            },
+            {
+                "id": "Electrical Works",
+                "type": "Work",
+                "properties": {}
+            },
+            {
+                "id": "Plumbing Works",
+                "type": "Work",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd Office Complex",
+                "type": "Place",
+                "properties": {}
+            },
+            {
+                "id": "Sector 9, Rohini, Delhi",
+                "type": "Place",
+                "properties": {}
+            },
+            {
+                "id": "\u20b91,25,00,000",
+                "type": "Money",
+                "properties": {}
+            },
+            {
+                "id": "Rupees One Crore Twenty Five Lakhs Only",
+                "type": "Money",
+                "properties": {}
+            },
+            {
+                "id": "8 Months",
+                "type": "Duration",
+                "properties": {}
+            },
+            {
+                "id": "April 2024",
+                "type": "Date",
+                "properties": {}
+            },
+            {
+                "id": "November 2024",
+                "type": "Date",
+                "properties": {}
+            },
+            {
+                "id": "Within 7 Days Of Contract Signing",
+                "type": "Duration",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Administrative Block",
+                    "type": "Building",
+                    "properties": {}
+                },
+                "type": "WORK_ON",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Civil Works",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Electrical Works",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Plumbing Works",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cpwd Office Complex",
+                    "type": "Place",
+                    "properties": {}
+                },
+                "type": "SITE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Cpwd Office Complex",
+                    "type": "Place",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Sector 9, Rohini, Delhi",
+                    "type": "Place",
+                    "properties": {}
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "\u20b91,25,00,000",
+                    "type": "Money",
+                    "properties": {}
+                },
+                "type": "CONTRACT_VALUE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "\u20b91,25,00,000",
+                    "type": "Money",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Rupees One Crore Twenty Five Lakhs Only",
+                    "type": "Money",
+                    "properties": {}
+                },
+                "type": "SAME_AS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "8 Months",
+                    "type": "Duration",
+                    "properties": {}
+                },
+                "type": "DURATION",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "8 Months",
+                    "type": "Duration",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "April 2024",
+                    "type": "Date",
+                    "properties": {}
+                },
+                "type": "START_DATE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "8 Months",
+                    "type": "Duration",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "November 2024",
+                    "type": "Date",
+                    "properties": {}
+                },
+                "type": "END_DATE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Renovation And Upgradation Of Administrative Block",
+                    "type": "Work",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Within 7 Days Of Contract Signing",
+                    "type": "Duration",
+                    "properties": {}
+                },
+                "type": "COMMENCEMENT",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "WORK DESCRIPTION:\n    Renovation and upgradation of Administrative Block including civil, electrical, and plumbing works\n    Site: CPWD Office Complex, Sector 9, Rohini, Delhi\n\n    CONTRACT PARTICULARS:\n    Contract Value: \u20b91,25,00,000 (Rupees One Crore Twenty Five Lakhs Only)\n    Duration: 8 months (April 2024 to November 2024)\n    Commencement: Within 7 days of contract signing",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Financial Terms",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Advance Payment",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "10% Of Contract Value",
+                "type": "Value",
+                "properties": {}
+            },
+            {
+                "id": "Bank Guarantee",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Retention Money",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "5% Of Each Running Bill",
+                "type": "Value",
+                "properties": {}
+            },
+            {
+                "id": "Running Bill",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Performance Guarantee",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "10% Of Contract Value For Defect Liability Period + 3 Months",
+                "type": "Value",
+                "properties": {}
+            },
+            {
+                "id": "Defect Liability Period + 3 Months",
+                "type": "Time",
+                "properties": {}
+            },
+            {
+                "id": "Liquidated Damages",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "0.5% Per Week Of Contract Value",
+                "type": "Value",
+                "properties": {}
+            },
+            {
+                "id": "Maximum 10%",
+                "type": "Value",
+                "properties": {}
+            },
+            {
+                "id": "Final Payment",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Within 60 Days Of Completion Certificate",
+                "type": "Time",
+                "properties": {}
+            },
+            {
+                "id": "Completion Certificate",
+                "type": "Document",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Advance Payment",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Financial Terms",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "PART_OF",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Advance Payment",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "10% Of Contract Value",
+                    "type": "Value",
+                    "properties": {}
+                },
+                "type": "AMOUNT",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Advance Payment",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Bank Guarantee",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "CONDITION",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Retention Money",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Financial Terms",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "PART_OF",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Retention Money",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "5% Of Each Running Bill",
+                    "type": "Value",
+                    "properties": {}
+                },
+                "type": "AMOUNT",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Retention Money",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Running Bill",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "APPLIES_TO",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Performance Guarantee",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Financial Terms",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "PART_OF",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Performance Guarantee",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "10% Of Contract Value For Defect Liability Period + 3 Months",
+                    "type": "Value",
+                    "properties": {}
+                },
+                "type": "AMOUNT",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Performance Guarantee",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Defect Liability Period + 3 Months",
+                    "type": "Time",
+                    "properties": {}
+                },
+                "type": "DURATION",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Liquidated Damages",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Financial Terms",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "PART_OF",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Liquidated Damages",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "0.5% Per Week Of Contract Value",
+                    "type": "Value",
+                    "properties": {}
+                },
+                "type": "RATE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Liquidated Damages",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Maximum 10%",
+                    "type": "Value",
+                    "properties": {}
+                },
+                "type": "MAXIMUM",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Final Payment",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Financial Terms",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "PART_OF",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Final Payment",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Within 60 Days Of Completion Certificate",
+                    "type": "Time",
+                    "properties": {}
+                },
+                "type": "DUE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Final Payment",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Completion Certificate",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "CONDITION",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "FINANCIAL TERMS:\n    Advance Payment: 10% of contract value against bank guarantee\n    Retention Money: 5% of each running bill\n    Performance Guarantee: 10% of contract value for defect liability period + 3 months\n    Liquidated Damages: 0.5% per week of contract value, maximum 10%\n    Final Payment: Within 60 days of completion certificate",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Concrete",
+                "type": "Material",
+                "properties": {}
+            },
+            {
+                "id": "M20 Grade",
+                "type": "Grade",
+                "properties": {}
+            },
+            {
+                "id": "Is:456-2000",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Is:383-2016",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Steel",
+                "type": "Material",
+                "properties": {}
+            },
+            {
+                "id": "Fe500 Grade",
+                "type": "Grade",
+                "properties": {}
+            },
+            {
+                "id": "Is:1786-2008",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Cement",
+                "type": "Material",
+                "properties": {}
+            },
+            {
+                "id": "Opc 53 Grade",
+                "type": "Grade",
+                "properties": {}
+            },
+            {
+                "id": "Is:12269-2013",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Bricks",
+                "type": "Material",
+                "properties": {}
+            },
+            {
+                "id": "First Class",
+                "type": "Grade",
+                "properties": {}
+            },
+            {
+                "id": "Is:1077-1992",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Quality Control",
+                "type": "Process",
+                "properties": {}
+            },
+            {
+                "id": "Third-Party Inspection",
+                "type": "Process",
+                "properties": {}
+            },
+            {
+                "id": "Critical Items",
+                "type": "Item",
+                "properties": {}
+            },
+            {
+                "id": "Nabl Accredited Testing Labs",
+                "type": "Organization",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Concrete",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "M20 Grade",
+                    "type": "Grade",
+                    "properties": {}
+                },
+                "type": "GRADE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Concrete",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Is:456-2000",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "STANDARD",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Concrete",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Is:383-2016",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "STANDARD",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Steel",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Fe500 Grade",
+                    "type": "Grade",
+                    "properties": {}
+                },
+                "type": "GRADE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Steel",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Is:1786-2008",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "STANDARD",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Cement",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Opc 53 Grade",
+                    "type": "Grade",
+                    "properties": {}
+                },
+                "type": "GRADE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Cement",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Is:12269-2013",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "STANDARD",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Bricks",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "First Class",
+                    "type": "Grade",
+                    "properties": {}
+                },
+                "type": "GRADE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Bricks",
+                    "type": "Material",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Is:1077-1992",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "STANDARD",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Quality Control",
+                    "type": "Process",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Third-Party Inspection",
+                    "type": "Process",
+                    "properties": {}
+                },
+                "type": "INSPECTION",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Third-Party Inspection",
+                    "type": "Process",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Critical Items",
+                    "type": "Item",
+                    "properties": {}
+                },
+                "type": "FOR",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Quality Control",
+                    "type": "Process",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Nabl Accredited Testing Labs",
+                    "type": "Organization",
+                    "properties": {}
+                },
+                "type": "TESTING",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "TECHNICAL SPECIFICATIONS:\n    Concrete: M20 grade as per IS:456-2000, IS:383-2016\n    Steel: Fe500 grade conforming to IS:1786-2008\n    Cement: OPC 53 grade as per IS:12269-2013\n    Bricks: First class as per IS:1077-1992\n    Quality Control: Third-party inspection for critical items, NABL accredited testing labs",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Safety And Compliance",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Safety Officer",
+                "type": "Role",
+                "properties": {}
+            },
+            {
+                "id": "Qualified Safety Officer Appointment",
+                "type": "Requirement",
+                "properties": {}
+            },
+            {
+                "id": "Safety Standards",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd Safety Code",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Is Standards",
+                "type": "Standard",
+                "properties": {}
+            },
+            {
+                "id": "Environmental Compliance",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Dust Control",
+                "type": "Requirement",
+                "properties": {}
+            },
+            {
+                "id": "Noise Pollution Limits",
+                "type": "Requirement",
+                "properties": {}
+            },
+            {
+                "id": "Waste Management",
+                "type": "Requirement",
+                "properties": {}
+            },
+            {
+                "id": "Labor Compliance",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Contract Labor Act",
+                "type": "Law",
+                "properties": {}
+            },
+            {
+                "id": "Minimum Wages Act",
+                "type": "Law",
+                "properties": {}
+            },
+            {
+                "id": "Pf/Esi Registration",
+                "type": "Requirement",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Safety And Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Safety Officer",
+                    "type": "Role",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Safety Officer",
+                    "type": "Role",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Qualified Safety Officer Appointment",
+                    "type": "Requirement",
+                    "properties": {}
+                },
+                "type": "REQUIRES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Safety And Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Safety Standards",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Safety Standards",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cpwd Safety Code",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "AS_PER",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Safety Standards",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Is Standards",
+                    "type": "Standard",
+                    "properties": {}
+                },
+                "type": "AS_PER",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Safety And Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Environmental Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Environmental Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Dust Control",
+                    "type": "Requirement",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Environmental Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Noise Pollution Limits",
+                    "type": "Requirement",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Environmental Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Waste Management",
+                    "type": "Requirement",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Safety And Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Labor Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Labor Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Contract Labor Act",
+                    "type": "Law",
+                    "properties": {}
+                },
+                "type": "COMPLIES_WITH",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Labor Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Minimum Wages Act",
+                    "type": "Law",
+                    "properties": {}
+                },
+                "type": "COMPLIES_WITH",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Labor Compliance",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Pf/Esi Registration",
+                    "type": "Requirement",
+                    "properties": {}
+                },
+                "type": "REQUIRES",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "SAFETY AND COMPLIANCE:\n    Safety Officer: Qualified safety officer appointment mandatory\n    Safety Standards: As per CPWD Safety Code and IS standards\n    Environmental Compliance: Dust control, noise pollution limits, waste management\n    Labor Compliance: Contract Labor Act, Minimum Wages Act, PF/ESI registration",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Arbitration",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Single Arbitrator",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Arbitration And Conciliation Act 2015",
+                "type": "Law",
+                "properties": {}
+            },
+            {
+                "id": "Jurisdiction",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Delhi High Court",
+                "type": "Organization",
+                "properties": {}
+            },
+            {
+                "id": "Governing Law",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Indian Contract Act",
+                "type": "Law",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd General Conditions",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Force Majeure",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Natural Disasters",
+                "type": "Event",
+                "properties": {}
+            },
+            {
+                "id": "Government Orders",
+                "type": "Event",
+                "properties": {}
+            },
+            {
+                "id": "Pandemic Situations",
+                "type": "Event",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Arbitration",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Single Arbitrator",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "HAS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Arbitration",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Arbitration And Conciliation Act 2015",
+                    "type": "Law",
+                    "properties": {}
+                },
+                "type": "GOVERNED_BY",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Jurisdiction",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Delhi High Court",
+                    "type": "Organization",
+                    "properties": {}
+                },
+                "type": "HAS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Governing Law",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Indian Contract Act",
+                    "type": "Law",
+                    "properties": {}
+                },
+                "type": "HAS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Governing Law",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cpwd General Conditions",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "HAS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Force Majeure",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Natural Disasters",
+                    "type": "Event",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Force Majeure",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Government Orders",
+                    "type": "Event",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Force Majeure",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Pandemic Situations",
+                    "type": "Event",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "LEGAL PROVISIONS:\n    Arbitration: Single arbitrator as per Arbitration and Conciliation Act 2015\n    Jurisdiction: Delhi High Court\n    Governing Law: Indian Contract Act and CPWD General Conditions\n    Force Majeure: Natural disasters, government orders, pandemic situations",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Insurance And Guarantees",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Contractor'S All Risk Insurance",
+                "type": "Insurance",
+                "properties": {}
+            },
+            {
+                "id": "Comprehensive Coverage During Execution",
+                "type": "Coverage",
+                "properties": {}
+            },
+            {
+                "id": "Performance Guarantee",
+                "type": "Guarantee",
+                "properties": {}
+            },
+            {
+                "id": "Bank Guarantee",
+                "type": "Guarantee",
+                "properties": {}
+            },
+            {
+                "id": "10% Of Contract Value",
+                "type": "Value",
+                "properties": {}
+            },
+            {
+                "id": "Workmen'S Compensation",
+                "type": "Insurance",
+                "properties": {}
+            },
+            {
+                "id": "Workmen'S Compensation Act",
+                "type": "Law",
+                "properties": {}
+            },
+            {
+                "id": "Defect Liability Period",
+                "type": "Period",
+                "properties": {}
+            },
+            {
+                "id": "24 Months From Completion",
+                "type": "Time",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Insurance And Guarantees",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Contractor'S All Risk Insurance",
+                    "type": "Insurance",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Contractor'S All Risk Insurance",
+                    "type": "Insurance",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Comprehensive Coverage During Execution",
+                    "type": "Coverage",
+                    "properties": {}
+                },
+                "type": "COVERAGE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Insurance And Guarantees",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Performance Guarantee",
+                    "type": "Guarantee",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Performance Guarantee",
+                    "type": "Guarantee",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Bank Guarantee",
+                    "type": "Guarantee",
+                    "properties": {}
+                },
+                "type": "TYPE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Performance Guarantee",
+                    "type": "Guarantee",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "10% Of Contract Value",
+                    "type": "Value",
+                    "properties": {}
+                },
+                "type": "AMOUNT",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Insurance And Guarantees",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Workmen'S Compensation",
+                    "type": "Insurance",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Workmen'S Compensation",
+                    "type": "Insurance",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Workmen'S Compensation Act",
+                    "type": "Law",
+                    "properties": {}
+                },
+                "type": "AS_PER",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Insurance And Guarantees",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Defect Liability Period",
+                    "type": "Period",
+                    "properties": {}
+                },
+                "type": "INCLUDES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Defect Liability Period",
+                    "type": "Period",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "24 Months From Completion",
+                    "type": "Time",
+                    "properties": {}
+                },
+                "type": "DURATION",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "INSURANCE AND GUARANTEES:\n    Contractor's All Risk Insurance: Comprehensive coverage during execution\n    Performance Guarantee: Bank guarantee for 10% of contract value\n    Workmen's Compensation: As per Workmen's Compensation Act\n    Defect Liability Period: 24 months from completion",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Documentation",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Detailed Drawings And Specifications",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Annexure A",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Bill Of Quantities With Rate Analysis",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Annexure B",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd General Conditions 2019 Edition",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Method Statements",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Critical Activities",
+                "type": "Activity",
+                "properties": {}
+            },
+            {
+                "id": "Progress Reports",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Monthly Submission",
+                "type": "Requirement",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Detailed Drawings And Specifications",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Annexure A",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "ATTACHED_AS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Bill Of Quantities With Rate Analysis",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Annexure B",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "ATTACHED_AS",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Cpwd General Conditions 2019 Edition",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Documentation",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "APPLICABLE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Method Statements",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Critical Activities",
+                    "type": "Activity",
+                    "properties": {}
+                },
+                "type": "REQUIRED_FOR",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Progress Reports",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Monthly Submission",
+                    "type": "Requirement",
+                    "properties": {}
+                },
+                "type": "SUBMISSION",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "DOCUMENTATION:\n    Detailed drawings and specifications attached as Annexure A\n    Bill of Quantities with rate analysis as Annexure B\n    CPWD General Conditions 2019 edition applicable\n    Method statements required for critical activities\n    Progress reports: Monthly submission mandatory",
+            "type": "Document"
+        }
+    },
+    {
+        "nodes": [
+            {
+                "id": "Variation Works",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "25%",
+                "type": "Quantity",
+                "properties": {}
+            },
+            {
+                "id": "Competent Authority Approval",
+                "type": "Approval",
+                "properties": {}
+            },
+            {
+                "id": "Rate Determination",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd Schedule Of Rates",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Preference",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Time Extensions",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Application",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "30 Days",
+                "type": "Duration",
+                "properties": {}
+            },
+            {
+                "id": "Cause",
+                "type": "Concept",
+                "properties": {}
+            },
+            {
+                "id": "Contract",
+                "type": "Document",
+                "properties": {}
+            },
+            {
+                "id": "Cpwd Standard Conditions And Procedures",
+                "type": "Document",
+                "properties": {}
+            }
+        ],
+        "relationships": [
+            {
+                "source": {
+                    "id": "Variation Works",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "25%",
+                    "type": "Quantity",
+                    "properties": {}
+                },
+                "type": "LIMIT",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Variation Works",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Competent Authority Approval",
+                    "type": "Approval",
+                    "properties": {}
+                },
+                "type": "REQUIRES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Rate Determination",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cpwd Schedule Of Rates",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "PREFERENCE",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Time Extensions",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Application",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "REQUIRES",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Application",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "30 Days",
+                    "type": "Duration",
+                    "properties": {}
+                },
+                "type": "WITHIN",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Application",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cause",
+                    "type": "Concept",
+                    "properties": {}
+                },
+                "type": "FROM",
+                "properties": {}
+            },
+            {
+                "source": {
+                    "id": "Contract",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "target": {
+                    "id": "Cpwd Standard Conditions And Procedures",
+                    "type": "Document",
+                    "properties": {}
+                },
+                "type": "INCORPORATES",
+                "properties": {}
+            }
+        ],
+        "source": {
+            "id": null,
+            "metadata": {
+                "source": "cpwd.txt"
+            },
+            "page_content": "VARIATION AND EXTENSIONS:\n    Variation Works: Up to 25% with competent authority approval\n    Rate Determination: CPWD Schedule of Rates preference\n    Time Extensions: Application within 30 days of cause\n\n    This contract incorporates CPWD standard conditions and procedures.",
+            "type": "Document"
+        }
+    }
+]

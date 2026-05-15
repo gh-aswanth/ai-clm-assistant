@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --clm-bg-page: #f4f6f9;
+  --clm-bg-surface: #ffffff;
+  --clm-bg-surface-elevated: #fbfdff;
+  --clm-bg-overlay: #edf2f8;
+  --clm-border: #d6dde8;
+  --clm-divider: #e4e9f2;
+  --clm-brand: #0f4c81;
+  --clm-brand-strong: #0a3760;
+  --clm-brand-soft: #e7f0fb;
+  --clm-brand-soft-text: #1e4f80;
+  --clm-success: #0f766e;
+  --clm-warning: #b45309;
+  --clm-danger: #b91c1c;
+  --clm-text: #10243f;
+  --clm-text-muted: #64748b;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--clm-bg-page);
+  color: var(--clm-text);
+}
+
+.dark {
+  --clm-bg-page: #050f1d;
+  --clm-bg-surface: #0d1a2d;
+  --clm-bg-surface-elevated: #111f34;
+  --clm-bg-overlay: #111f34;
+  --clm-border: #21314e;
+  --clm-divider: #223656;
+  --clm-brand: #4f9cf9;
+  --clm-brand-strong: #2b75c8;
+  --clm-brand-soft: #1b2e4b;
+  --clm-brand-soft-text: #94c1ff;
+  --clm-success: #34d399;
+  --clm-warning: #f59e0b;
+  --clm-danger: #f87171;
+  --clm-text: #e8efff;
+  --clm-text-muted: #9fb1cf;
+}
+
+/*
+ * PDF raster: only the canvas (page pixels) stays white so rendering isn’t inverted.
+ * #pdf-container stays transparent so the themed preview gutter shows in dark mode.
+ */
+#pdf-canvas,
+canvas.page-canvas {
+  background-color: white !important;
+  color: black !important;
+}
+
+canvas.page-canvas {
+  display: block !important;
+}
+
+#pdf-container {
+  background: transparent !important;
+}
+
+.clm-shell {
+  background: linear-gradient(180deg, var(--clm-bg-page), var(--clm-bg-overlay));
+  color: var(--clm-text);
+  font-size: clamp(14px, 0.95vw + 12px, 16px);
+  line-height: 1.55;
+}
+
+/* Full-screen agent chat: stop clipping position:fixed overlay inside scrollable <main> */
+html.clm-agent-chat-fs main.flex-1.overflow-y-auto {
+  overflow: visible !important;
+}
+
+/*
+ * Contract detail — pulse / milestone / quick links strip.
+ * Viewport breakpoints (lg:) are wrong here: padding-right from docked chat + document preview
+ * shrinks the real width while the viewport stays “large”, squeezing 3 columns into unusable slivers.
+ * Layout follows the strip’s inline size via container queries.
+ */
+.clm-pulse-strip {
+  container-type: inline-size;
+  container-name: clm-pulse;
+  min-width: 0;
+}
+
+.clm-pulse-strip__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-width: 0;
+  align-items: stretch;
+}
+
+/* Two-up: pulse full width, then milestone | quick links (matches prior md behavior) */
+@container clm-pulse (min-width: 42rem) {
+  .clm-pulse-strip__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .clm-pulse-strip__pulse {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Three equal columns only when the strip itself is wide enough */
+@container clm-pulse (min-width: 56rem) {
+  .clm-pulse-strip__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .clm-pulse-strip__pulse {
+    grid-column: auto;
+  }
+}
+
+/* Borders per layout segment (replacing viewport-based lg:/md: border utilities) */
+@container clm-pulse (max-width: 41.9375rem) {
+  .clm-pulse-strip__pulse,
+  .clm-pulse-strip__milestone {
+    border-bottom: 1px solid var(--clm-border);
+  }
+}
+
+@container clm-pulse (min-width: 42rem) and (max-width: 55.9375rem) {
+  .clm-pulse-strip__pulse {
+    border-bottom: 1px solid var(--clm-border);
+  }
+  .clm-pulse-strip__milestone {
+    border-right: 1px solid var(--clm-border);
+  }
+}
+
+@container clm-pulse (min-width: 56rem) {
+  .clm-pulse-strip__pulse {
+    border-right: 1px solid var(--clm-border);
+    border-bottom: none;
+  }
+  .clm-pulse-strip__milestone {
+    border-right: 1px solid var(--clm-border);
+    border-bottom: none;
+  }
+}
+
+/* Icon grid: 2×N when the quick panel is narrow, 4 across when there is room */
+.clm-pulse-strip__quick nav {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@container clm-pulse (min-width: 24rem) {
+  .clm-pulse-strip__quick nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.clm-shell .clm-sidebar,
+.clm-shell .clm-sidebar button {
+  color: var(--clm-text);
+}
+
+/* Brand link + legacy nav; modern rail uses .clm-nav-link--modern for its own tones */
+.clm-shell .clm-sidebar a:not(.clm-nav-link--modern) {
+  color: var(--clm-text);
+}
+
+.clm-sidebar {
+  background: linear-gradient(
+    165deg,
+    var(--clm-bg-surface) 0%,
+    var(--clm-bg-surface-elevated) 48%,
+    var(--clm-bg-overlay) 100%
+  );
+  border-right-color: var(--clm-border);
+}
+
+.dark .clm-sidebar {
+  background: linear-gradient(165deg, var(--clm-bg-surface) 0%, #0a1528 55%, var(--clm-bg-page) 100%);
+}
+
+.clm-topbar {
+  background: var(--clm-bg-surface);
+  border-bottom-color: var(--clm-border);
+  color: var(--clm-text);
+  backdrop-filter: saturate(140%) blur(8px);
+}
+
+.clm-page-shell {
+  background: transparent;
+  color: var(--clm-text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Do not blanket-style every .rounded-xl / .rounded-2xl — it overrides Tailwind utilities
+   (tabs, gradients, translucent panels) on dense pages like contract detail. */
+
+/* Primary CTAs must not inherit forced surface fill from any parent card rules */
+.clm-page-shell .clm-pulse-cta {
+  background: var(--clm-brand) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+.clm-page-shell .clm-pulse-cta:hover {
+  background: var(--clm-brand-strong) !important;
+}
+.clm-page-shell .clm-pulse-cta svg {
+  color: #fff;
+}
+
+/* Guideline attachment widget: icon tile must not pick up forced surface fill from .rounded-xl rules */
+.clm-page-shell .clm-guideline-att-icon {
+  background: linear-gradient(135deg, var(--clm-brand), #4338ca) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+.clm-page-shell .clm-guideline-att-icon svg {
+  color: #fff !important;
+  stroke: #fff !important;
+}
+
+.clm-page-shell .border,
+.clm-page-shell .border-t,
+.clm-page-shell .border-b,
+.clm-page-shell .border-l,
+.clm-page-shell .border-r {
+  border-color: var(--clm-border);
+}
+
+.clm-page-shell .bg-blue-600,
+.clm-page-shell .hover\:bg-blue-700:hover,
+.clm-page-shell .bg-green-600,
+.clm-page-shell .hover\:bg-green-700:hover {
+  background: var(--clm-brand) !important;
+}
+
+.clm-page-shell .hover\:bg-blue-700:hover,
+.clm-page-shell .hover\:bg-green-700:hover {
+  background: var(--clm-brand-strong) !important;
+}
+
+.clm-page-shell .bg-blue-50,
+.clm-page-shell .bg-green-50,
+.clm-page-shell .bg-yellow-100,
+.clm-page-shell .bg-amber-100 {
+  background: var(--clm-brand-soft) !important;
+}
+
+.clm-page-shell .text-blue-600,
+.clm-page-shell .text-blue-700,
+.clm-page-shell .text-blue-500 {
+  color: var(--clm-brand);
+}
+
+.clm-page-shell .text-green-600,
+.clm-page-shell .text-green-700,
+.clm-page-shell .text-green-500 {
+  color: var(--clm-success);
+}
+
+.clm-page-shell .text-red-600,
+.clm-page-shell .text-red-700,
+.clm-page-shell .text-red-500 {
+  color: var(--clm-danger);
+}
+
+.clm-page-shell .text-yellow-600,
+.clm-page-shell .text-amber-600,
+.clm-page-shell .text-yellow-700,
+.clm-page-shell .text-amber-700 {
+  color: var(--clm-warning);
+}
+
+.clm-page-shell .text-gray-400,
+.clm-page-shell .text-gray-500,
+.clm-page-shell .text-gray-600 {
+  color: var(--clm-text-muted);
+}
+
+.clm-page-shell .bg-red-100,
+.clm-page-shell .bg-amber-100,
+.clm-page-shell .bg-green-100,
+.clm-page-shell .bg-gray-100 {
+  background: var(--clm-bg-surface-elevated) !important;
+}
+
+.clm-page-shell .text-xs {
+  font-size: 0.78rem;
+}
+
+.clm-page-shell .text-\[10px\] {
+  font-size: 0.75rem;
+}
+
+.clm-page-shell .text-\[11px\] {
+  font-size: 0.76rem;
+}
+
+.clm-icon-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--clm-border);
+  background: var(--clm-bg-surface);
+  color: var(--clm-text);
+  transition: all 180ms ease;
+}
+
+.clm-icon-btn:hover {
+  background: var(--clm-brand-soft);
+}
+
+.clm-card {
+  background: var(--clm-bg-surface);
+  border-color: var(--clm-border);
+  box-shadow: 0 14px 34px -24px rgba(15, 76, 129, 0.25);
+}
+
+.clm-card-elevated {
+  background: var(--clm-bg-surface-elevated);
+  border-color: var(--clm-border);
+  box-shadow: 0 18px 38px -24px rgba(15, 76, 129, 0.33);
+}
+
+.clm-text-muted {
+  color: var(--clm-text-muted);
+}
+
+.clm-nav-link {
+  color: var(--clm-text);
+  border-left: 3px solid transparent;
+}
+
+.clm-nav-link:hover {
+  background: var(--clm-brand-soft);
+  color: var(--clm-brand-strong);
+}
+
+.router-link-active.clm-nav-link,
+.router-link-exact-active.clm-nav-link {
+  background: var(--clm-brand-soft);
+  border-left-color: var(--clm-brand);
+  color: var(--clm-brand-strong);
+}
+
+/* Modern sidebar rail (App.vue) — pill rows + optional active bar */
+.clm-nav-link--modern {
+  border-left: none;
+  position: relative;
+  color: var(--clm-text-muted);
+}
+
+.clm-nav-link--modern:hover {
+  background: var(--clm-brand-soft);
+  color: var(--clm-text);
+}
+
+.clm-nav-link--modern.clm-nav-link--active {
+  background: var(--clm-brand-soft);
+  color: var(--clm-brand-strong);
+  box-shadow: 0 1px 0 rgba(15, 76, 129, 0.06);
+}
+
+.dark .clm-nav-link--modern {
+  color: var(--clm-text-muted);
+}
+
+.dark .clm-nav-link--modern:hover {
+  color: var(--clm-text);
+}
+
+.dark .clm-nav-link--modern.clm-nav-link--active {
+  color: var(--clm-brand-soft-text);
+  box-shadow: 0 1px 0 rgba(79, 156, 249, 0.12);
+}
+
+.clm-nav-link--modern.clm-nav-link--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  border-radius: 0 4px 4px 0;
+  background: var(--clm-brand);
+}
+
+.clm-sidebar--collapsed .clm-nav-link--modern.clm-nav-link--active::before {
+  height: 70%;
+}
+
+.clm-btn-primary {
+  background-color: var(--clm-brand);
+  color: #ffffff;
+  transition: all 180ms ease;
+}
+
+.clm-btn-primary:hover {
+  background-color: var(--clm-brand-strong);
+}
+
+.clm-btn-secondary {
+  background: #edf2ff;
+  color: var(--clm-brand);
+  border: 1px solid var(--clm-border);
+  transition: all 180ms ease;
+}
+
+.clm-btn-secondary:hover {
+  background: #e4edff;
+}
+
+.dark .clm-btn-secondary {
+  background: var(--clm-bg-surface-elevated);
+  color: var(--clm-brand-soft-text);
+  border-color: var(--clm-border);
+}
+
+.dark .clm-btn-secondary:hover {
+  background: var(--clm-bg-overlay);
+  color: var(--clm-text);
+}
+
+.clm-border {
+  border-color: var(--clm-border);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Chat markdown (GFM): tables, task lists, lists, long copy — assistant bubbles */
+/* -------------------------------------------------------------------------- */
+.chat-md {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--clm-text);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.chat-md > *:first-child {
+  margin-top: 0 !important;
+}
+
+.chat-md > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.chat-md p {
+  margin: 0 0 0.85em;
+  line-height: 1.68;
+}
+
+.chat-md p + p {
+  margin-top: 0.65em;
+}
+
+.chat-md h1,
+.chat-md h2,
+.chat-md h3,
+.chat-md h4,
+.chat-md h5,
+.chat-md h6 {
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--clm-text);
+  margin: 1.15em 0 0.5em;
+  letter-spacing: -0.02em;
+}
+
+.chat-md h1:first-child,
+.chat-md h2:first-child,
+.chat-md h3:first-child {
+  margin-top: 0;
+}
+
+.chat-md h1 {
+  font-size: 1.2rem;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid var(--clm-brand);
+  color: var(--clm-brand-strong);
+}
+
+.dark .chat-md h1 {
+  color: var(--clm-brand);
+  border-bottom-color: var(--clm-brand-strong);
+}
+
+.chat-md h2 {
+  font-size: 1.08rem;
+  color: var(--clm-brand-strong);
+  border-bottom: 1px solid var(--clm-divider);
+  padding-bottom: 0.25em;
+}
+
+.dark .chat-md h2 {
+  color: var(--clm-text);
+}
+
+.chat-md h3 {
+  font-size: 1.02rem;
+  color: var(--clm-brand-soft-text);
+}
+
+.dark .chat-md h3 {
+  color: var(--clm-brand-soft-text);
+}
+
+.chat-md h4 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--clm-text-muted);
+}
+
+.chat-md h5,
+.chat-md h6 {
+  font-size: 0.88rem;
+  color: var(--clm-text-muted);
+}
+
+.chat-md a {
+  color: var(--clm-brand-strong);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .chat-md a {
+  color: var(--clm-brand);
+}
+
+.chat-md a:hover {
+  color: var(--clm-brand);
+}
+
+.dark .chat-md a:hover {
+  color: var(--clm-brand-soft-text);
+}
+
+.chat-md strong {
+  font-weight: 800;
+  color: var(--clm-text);
+}
+
+.chat-md em {
+  font-style: italic;
+  color: var(--clm-text-muted);
+}
+
+.chat-md del {
+  opacity: 0.75;
+  text-decoration: line-through;
+}
+
+.chat-md hr {
+  margin: 1.15em 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--clm-divider), transparent);
+}
+
+.chat-md blockquote {
+  margin: 0.85em 0;
+  padding: 0.65em 0.85em 0.65em 1rem;
+  border-left: 4px solid var(--clm-brand);
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: var(--clm-brand-soft);
+  color: var(--clm-text);
+}
+
+.dark .chat-md blockquote {
+  background: rgba(79, 156, 249, 0.08);
+  border-left-color: var(--clm-brand);
+}
+
+.chat-md blockquote p {
+  margin-bottom: 0.5em;
+}
+
+.chat-md blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.chat-md ul,
+.chat-md ol {
+  margin: 0.65em 0 0.85em;
+  padding-left: 1.35em;
+}
+
+.chat-md ul {
+  list-style-type: disc;
+}
+
+.chat-md ol {
+  list-style-type: decimal;
+}
+
+.chat-md ul ul,
+.chat-md ol ol,
+.chat-md ul ol,
+.chat-md ol ul {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+}
+
+.chat-md ul ul {
+  list-style-type: circle;
+}
+
+.chat-md ul ul ul {
+  list-style-type: square;
+}
+
+.chat-md ol ol {
+  list-style-type: lower-alpha;
+}
+
+.chat-md ol ol ol {
+  list-style-type: lower-roman;
+}
+
+.chat-md li {
+  margin: 0.35em 0;
+  padding-left: 0.15em;
+}
+
+.chat-md li::marker {
+  color: var(--clm-brand-strong);
+}
+
+.dark .chat-md li::marker {
+  color: var(--clm-brand);
+}
+
+.chat-md li > p {
+  margin: 0.35em 0;
+}
+
+.chat-md li > p:first-child {
+  margin-top: 0;
+}
+
+/* GFM task lists (marked emits <input type="checkbox" disabled>) */
+.chat-md ul:has(> li > input[type='checkbox']) {
+  list-style: none;
+  padding-left: 0.2em;
+}
+
+.chat-md li:has(> input[type='checkbox']) {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin: 0.4em 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.chat-md li > input[type='checkbox'] {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  margin: 0.28em 0 0;
+  accent-color: var(--clm-brand);
+  cursor: default;
+  pointer-events: none;
+  border-radius: 0.2rem;
+}
+
+.dark .chat-md li > input[type='checkbox'] {
+  accent-color: var(--clm-brand);
+}
+
+/* Tables (wrapper from marked renderer) */
+.chat-md-table-wrap {
+  margin: 0.85em 0;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clm-border);
+  background: var(--clm-bg-surface-elevated);
+}
+
+.chat-md table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.chat-md thead {
+  background: linear-gradient(180deg, var(--clm-brand-soft), var(--clm-bg-overlay));
+}
+
+.dark .chat-md thead {
+  background: linear-gradient(180deg, rgba(79, 156, 249, 0.12), var(--clm-bg-overlay));
+}
+
+.chat-md th,
+.chat-md td {
+  padding: 0.5em 0.65em;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--clm-border);
+  border-right: 1px solid var(--clm-divider);
+}
+
+.chat-md th:last-child,
+.chat-md td:last-child {
+  border-right: none;
+}
+
+.chat-md th {
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--clm-brand-strong);
+}
+
+.dark .chat-md th {
+  color: var(--clm-brand-soft-text);
+}
+
+.chat-md tbody tr:nth-child(even) {
+  background: rgba(15, 76, 129, 0.04);
+}
+
+.dark .chat-md tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.chat-md tbody tr:hover {
+  background: rgba(15, 76, 129, 0.07);
+}
+
+.dark .chat-md tbody tr:hover {
+  background: rgba(79, 156, 249, 0.08);
+}
+
+.chat-md tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Inline / fenced code */
+.chat-md code {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.84em;
+  padding: 0.12em 0.4em;
+  border-radius: 0.3rem;
+  background: var(--clm-bg-overlay);
+  border: 1px solid var(--clm-border);
+  color: var(--clm-danger);
+  font-weight: 500;
+}
+
+.dark .chat-md code {
+  color: var(--clm-warning);
+  background: var(--clm-bg-overlay);
+  border-color: var(--clm-border);
+}
+
+.chat-md pre {
+  margin: 0.85em 0;
+  padding: 0.75em 0.85em;
+  border-radius: 0.45rem;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  background: var(--clm-bg-overlay);
+  border: 1px solid var(--clm-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dark .chat-md pre {
+  background: #0a1628;
+  border-color: var(--clm-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.chat-md pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--clm-text);
+  font-weight: 400;
+  font-size: inherit;
+}
+
+.chat-md img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.35rem;
+  margin: 0.5em 0;
+}
