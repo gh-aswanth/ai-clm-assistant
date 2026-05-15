@@ -5,6 +5,9 @@
 - **Frontend**: Vue.js 3 with Vite and Tailwind CSS.
 - **Database**: SQLite (managed with SQLAlchemy and Alembic).
 - **Deployment**: Docker Compose.
+
+![System Architecture](docs/image.png)
+
 ---
 ## Running the Application
 To start the entire system:
